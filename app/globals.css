@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
+:root {
+  --green: #2e8b57;
+  --blue: #1a5f9e;
+  --light-green: #e8f5e9;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -20,7 +27,103 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #f8fdf9 0%, var(--light-green) 50%, #f0f7ff 100%);
+  padding: 2rem;
+  text-align: center;
 }
+
+.container {
+  animation: fadeIn 1s ease-out;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  animation: pulse 3s ease-in-out infinite; 
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.03);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.construction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border: 2px solid var(--green);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: var(--green);
+  box-shadow: 0 4px 20px rgba(46, 139, 87, 0.15);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.3;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 300;
+}
+
