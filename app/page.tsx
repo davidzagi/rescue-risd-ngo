@@ -1,18 +1,27 @@
-import Image from "next/image";
+import Hero from '@/components/sections/Hero';
+import WhoWeAre from '@/components/sections/WhoWeAre';
+import WhatWeDo from '@/components/sections/WhatWeDo';
+import MeasureLastingChange from '@/components/sections/MeasureLastingChange';
+import CommunityFeedback from '@/components/sections/CommunityFeedback';
+import ContributeBanner from '@/components/sections/ContributeBanner';
+import {
+  HERO,
+  WHO_WE_ARE,
+  WHAT_WE_DO,
+  MEASURE_LASTING_CHANGE,
+  COMMUNITY_FEEDBACK,
+  CONTRIBUTE_BANNER,
+} from '@/data/site-data';
 
 export default function Home() {
   return (
-  <>
-  <div className="container"> 
-    <Image src="/risd-logo.jpg" alt="RISD Logo" width={200} height={200} />
-    <h1>Rescue Initiative for Sustainable Development</h1>
-    <p className="subtitle">Building a better future, together.</p>
-    <div className="construction-badge">  
-      <span className="dot"></span>
-      Website Under Construction  
-    </div>
-  </div>
-  <p className="footer">© 2026 RISD. All rights reserved.</p>
-  </>
+    <main>
+      <Hero {...HERO} />
+      <WhoWeAre {...WHO_WE_ARE} />
+      <WhatWeDo {...WHAT_WE_DO} />
+      <MeasureLastingChange {...MEASURE_LASTING_CHANGE} />
+      <CommunityFeedback {...COMMUNITY_FEEDBACK} />
+      <ContributeBanner {...CONTRIBUTE_BANNER} />
+    </main>
   );
 }

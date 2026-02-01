@@ -1,0 +1,14 @@
+HOW TO UPDATE THE "WHO WE ARE" IMAGE
+=====================================
+
+1. Replace this file with your new image:
+   children-eating.jpg
+
+2. Or add a new image and update the path in:
+   data/site-data.ts
+   
+   Change: image: { src: '/assets/About/children-eating.jpg', ... }
+   To:     image: { src: '/assets/About/your-new-image.jpg', ... }
+
+3. Recommended: Use a photo showing people/community (e.g. 1200x900px or similar)
+4. Supported formats: .jpg, .jpeg, .png, .webp
