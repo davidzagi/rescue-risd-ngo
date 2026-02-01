@@ -1,0 +1,15 @@
+HOW TO UPDATE THE "MEASURE LASTING CHANGE" IMAGE
+================================================
+
+1. Replace this file with your new image:
+   children-bw.jpg
+
+2. Or add a new image and update the path in:
+   data/site-data.ts
+   
+   In MEASURE_LASTING_CHANGE, change: image: { src: '/assets/MeasureLastingChange/your-image.jpg', ... }
+
+3. The image displays in grayscale (B&W) by default. Set grayscale: false in config for color.
+
+4. Recommended: Photo of people/community (e.g. 1200x900px)
+5. Supported formats: .jpg, .jpeg, .png, .webp
