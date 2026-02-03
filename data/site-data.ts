@@ -17,6 +17,58 @@ export const CONFIG = {
   },
 };
 
+/**
+ * FOOTER – Main footer (dark green) + copyright bar (light green).
+ * Edit logo, mission, CTAs, link columns, and copyright. No code changes needed.
+ */
+export const FOOTER = {
+  logo: {
+    /** Path to logo image – e.g. /assets/logo/risd-logo.svg */
+    src: '/assets/logo/risd-logo.svg',
+    alt: 'RISD Logo',
+    /** Brand name next to logo */
+    text: 'RISD',
+    href: '/',
+  },
+  /** Mission/description paragraph – edit freely */
+  mission:
+    'Great futures are built with the support of small charities that create meaningful change in their communities. By addressing local needs with compassion, these organizations lay the foundation for brighter tomorrows and empower individuals and families to thrive.',
+  primaryCta: {
+    label: 'Partner With Us',
+    href: '/partner',
+  },
+  secondaryCta: {
+    label: 'Support Our Work',
+    href: '/support',
+  },
+  /** Link columns (e.g. Our Work, Donate, Social). Add/remove columns or links in each. */
+  linkColumns: [
+    [
+      { label: 'Our Work', href: '/our-work' },
+      { label: 'Our Story', href: '/our-story' },
+      { label: 'Partner with us', href: '/partner' },
+    ],
+    [
+      { label: 'Donate', href: '/donate' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Internships', href: '/internships' },
+    ],
+    [
+      { label: 'Instagram', href: 'https://instagram.com' },
+      { label: 'Twitter', href: 'https://twitter.com' },
+      { label: 'LinkedIn', href: 'https://linkedin.com' },
+    ],
+  ],
+  copyright: {
+    /** Year in the notice – update each year or leave as-is */
+    year: 2026,
+    /** Organization name in the notice */
+    organizationName: 'RISD',
+    /** Full line override – if set, year and organizationName are ignored */
+    text: undefined as string | undefined,
+  },
+};
+
 export const HERO = {
   heading: 'Empowering the Poor and Vulnerable for a Sustainable Future',
   primaryCta: {
@@ -59,6 +111,117 @@ export const WHO_WE_ARE = {
     /** Alt text for accessibility - describe the photo */
     alt: 'Children at a community meal',
   },
+};
+
+/**
+ * VISION, MISSION, VALUES – Three-column section (e.g. on About page).
+ * Edit titles and content; no code changes needed.
+ */
+export const VISION_MISSION_VALUES = {
+  vision: {
+    title: 'Our Vision',
+    description:
+      'A society free from poverty, where everyone has equal opportunity to thrive.',
+  },
+  mission: {
+    title: 'Our Mission',
+    description:
+      'To improve the lives of the poor and vulnerable especially women, youth, and children through inclusive, strategic, and gender-responsive approaches that create sustainable environments and livelihoods.',
+  },
+  values: {
+    title: 'Our Values',
+    /** Each string is one line; use " • " or " & " for inline separators as needed */
+    items: [
+      'Accountability • Transparency • Integrity',
+      'Honesty • Gender Inclusion • Resilience',
+      'Collaboration & Teamwork',
+    ],
+  },
+};
+
+/**
+ * OUR TEAM – "Meet our team" section (e.g. on About page).
+ * Edit title, description, and members. Replace image.src with a photo in public/assets/Team/ (e.g. /assets/Team/leonard.jpg).
+ * Leave social URLs empty to hide that icon.
+ */
+export const OUR_TEAM = {
+  title: 'Meet our team',
+  description:
+    'The people behind Rescue Initiative for Sustainable Development—dedicated to building pathways out of poverty for women, youth, and children.',
+  members: [
+    {
+      name: 'Mrs Shedu Gar',
+      title: 'Cofounder, CEO',
+      image: { src: '/teams/member1.png', alt: 'mrs shehu gar' },
+      social: {
+        facebook: '',
+        twitter: 'https://twitter.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Suleiman',
+      title: 'Program Director',
+      image: { src: '/teams/member2.png', alt: 'Suleiman' },
+      social: {
+        facebook: 'https://facebook.com',
+        twitter: '',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Kyla Obrien',
+      title: 'Community Lead',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Kyla Obrien' },
+      social: {
+        facebook: '',
+        twitter: 'https://twitter.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Adrian Dixon',
+      title: 'Operations',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Adrian Dixon' },
+      social: {
+        facebook: 'https://facebook.com',
+        twitter: 'https://twitter.com',
+        linkedin: '',
+      },
+    },
+    {
+      name: 'Freddy Busby',
+      title: 'Partnerships',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Freddy Busby' },
+      social: { facebook: '', twitter: '', linkedin: 'https://linkedin.com' },
+    },
+    {
+      name: 'Dale Banks',
+      title: 'Finance',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Dale Banks' },
+      social: { facebook: 'https://facebook.com', twitter: '', linkedin: '' },
+    },
+    {
+      name: 'Miriam Middleton',
+      title: 'Communications',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Miriam Middleton' },
+      social: {
+        facebook: '',
+        twitter: 'https://twitter.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Ellen Walton',
+      title: 'Advisory',
+      image: { src: '/assets/Team/placeholder.svg', alt: 'Ellen Walton' },
+      social: {
+        facebook: '',
+        twitter: '',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+  ],
 };
 
 /**
@@ -151,6 +314,57 @@ export const COMMUNITY_FEEDBACK = {
       image: { src: '', alt: 'Community Leader' },
     },
   ],
+};
+
+/**
+ * CONTRIBUTE BANNER (below Community Feedback)
+ * CTA section with image, heading, and two buttons. Replace background image in public/assets/ContributeBanner/ to customize.
+ */
+/**
+ * FAQ section – accordion on the left, image on the right.
+ * Edit sectionLabel, title, and the faqs array (question + answer). Replace image in public/assets/Faq/ to update.
+ */
+export const FAQ = {
+  sectionLabel: 'WHAT WE DO',
+  title: 'Have any question For Us?',
+  faqs: [
+    {
+      question: 'How can I donate to your charity?',
+      answer:
+        'You can donate online through our website, by mailing a check, or through fundraising events. Every contribution, big or small, makes a difference!',
+    },
+    {
+      question: 'How do I make my donation tax-deductible?',
+      answer:
+        'RISD is a registered nonprofit. You will receive a receipt for your donation that you can use for tax purposes. Consult your tax advisor for details applicable to your situation.',
+    },
+    {
+      question: 'How do you ensure that donations are used effectively?',
+      answer:
+        'We use evidence-based programs, work with local communities, and report on outcomes. A significant portion of funds goes directly to program delivery and community support.',
+    },
+    {
+      question: 'Can I volunteer with your charity?',
+      answer:
+        'Yes. We welcome volunteers for programs, events, and skills-based support. Contact us through the website to learn about current opportunities.',
+    },
+    {
+      question: 'What types of programs does your charity support?',
+      answer:
+        'We focus on education, health, environment, and good governance—including literacy, vocational training, women’s empowerment, and sustainable livelihoods.',
+    },
+    {
+      question: "How can I stay updated on your charity's activities?",
+      answer:
+        'Sign up for our newsletter on the website, follow us on social media, or visit our News and Stories pages for the latest updates.',
+    },
+  ],
+  image: {
+    /** Replace with your own: add image to public/assets/Faq/ and set src to e.g. '/assets/Faq/faq-supporting.jpg' */
+    src: '/assets/About/children-eating.jpg',
+    /** Describe the photo for accessibility */
+    alt: 'Child in a thoughtful pose, community setting',
+  },
 };
 
 /**
