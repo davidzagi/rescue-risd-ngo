@@ -368,6 +368,39 @@ export const FAQ = {
 };
 
 /**
+ * CONTACT PAGE – Left: intro, email, phone, headquarter address. Right: "Get In Touch" form.
+ * Edit all text and contact details in site-data; no code changes needed.
+ */
+export const CONTACT = {
+  title: 'Contact Us',
+  intro:
+    "We're here to help! Reach out with any questions or support needs, and our team will get back to you promptly. Let's connect!",
+  email: 'rescuerisd@gmail.com',
+  website: 'https://www.rescuerisd.org.ng',
+  phones: ['08027322220', '08162607371'],
+  contactPersons: 'Lydia J. Shehu, Suleiman Dasika',
+  headquarter: 'Headquarter',
+  address: {
+    line1: 'No. 1 Behind WAEC Office, Along Dass/Tafawa Balewa Road, By Birshin Fulani Primary School',
+    line2: 'Bauchi',
+    line3: 'Nigeria',
+  },
+  form: {
+    title: 'Get In Touch',
+    subtitle: 'You can reach us any time.',
+    fields: {
+      fullName: 'Full Name',
+      email: 'Enter your Email Address',
+      phone: 'Enter your Phone Number',
+      message: 'Type your message here',
+    },
+    submitLabel: 'Send',
+  },
+  /** Google Map: custom embed URL from Google Maps → Share → Embed. If empty, map is built from the address above. */
+  mapEmbedUrl: '',
+};
+
+/**
  * CONTRIBUTE BANNER (below Community Feedback)
  * CTA section with image, heading, and two buttons. Replace background image in public/assets/ContributeBanner/ to customize.
  */
