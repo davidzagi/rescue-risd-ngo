@@ -8,6 +8,7 @@ export const CONFIG = {
   links: [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'FAQs', href: '/faqs' },
     { label: 'Contact', href: '/contact' },
   ],
@@ -420,4 +421,16 @@ export const CONTRIBUTE_BANNER = {
     alt: 'Children in a community setting',
   },
 };
-  
+
+/**
+ * GALLERY – Initiatives and image sets. Images live in public/gallery/{initiativeId}/image{N}.webp
+ */
+export const GALLERY = {
+  title: 'Our Gallery',
+  subtitle:
+    'Moments from our initiatives—community, impact, and the people we serve.',
+  initiatives: [
+    { id: 'initiative1', label: 'Initiative 1', imageCount: 22 },
+    { id: 'initiative2', label: 'Initiative 2', imageCount: 10 },
+  ],
+};
