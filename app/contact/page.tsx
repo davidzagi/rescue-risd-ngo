@@ -11,11 +11,33 @@ const BUTTON_BG = '#B8DC7C';
 export default function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus('sending');
-    // Placeholder: replace with your form handler (e.g. API route, Formspree, etc.)
-    setTimeout(() => setStatus('sent'), 800);
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error('Send failed');
+
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
   }
 
   const {

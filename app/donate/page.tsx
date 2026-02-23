@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { DONATE } from '@/data/site-data';
 import { Mail } from 'lucide-react';
+import PaymentScripts from '@/components/donate/PaymentScripts';
+import DonationForm from '@/components/donate/DonationForm';
+import BankDetails from '@/components/donate/BankDetails';
 
 export const metadata: Metadata = {
   title: 'Donate | RISD',
@@ -12,6 +15,8 @@ export const metadata: Metadata = {
 export default function DonatePage() {
   return (
     <main className="min-h-screen bg-[#f5f3ef]">
+      <PaymentScripts />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#094C3B] text-white">
         <div className="absolute inset-0 opacity-10">
@@ -62,23 +67,13 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* How to Donate */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-          {DONATE.howToDonate.title}
-        </h2>
-        <div className="grid sm:grid-cols-3 gap-6">
-          {DONATE.howToDonate.methods.map((method) => (
-            <div
-              key={method.title}
-              className="bg-white rounded-xl border border-gray-200 p-6"
-            >
-              <h3 className="text-lg font-bold text-[#2F5C4B] mb-3">{method.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{method.description}</p>
-            </div>
-          ))}
-        </div>
+      {/* Donation Form */}
+      <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <DonationForm />
       </section>
+
+      {/* Bank Details */}
+      <BankDetails />
 
       {/* Contact Note */}
       <section className="bg-[#2F5C4B] text-white py-14 lg:py-20">
