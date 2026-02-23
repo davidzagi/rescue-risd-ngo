@@ -85,7 +85,7 @@ export const HERO = {
     { value: '55', label: 'Communities Reached' },
   ],
   /** Add your image to public/hero-bg.jpg or use an external URL */
-  backgroundImage: '/assets/Hero/USSS.jpeg',
+  backgroundImage: '/assets/Hero/community-gathering.jpeg',
   /** Dark teal gradient overlay - configurable for different pages */
   gradientOverlay:
     'linear-gradient(to bottom, rgba(31, 71, 62, 0.88) 0%, rgba(31, 71, 62, 0.75) 100%)',
@@ -108,9 +108,9 @@ export const WHO_WE_ARE = {
   },
   image: {
     /** Path to image - replace file in public/assets/About/ or change path */
-    src: '/assets/About/children-eating.jpg',
+    src: '/assets/About/training-session.jpeg',
     /** Alt text for accessibility - describe the photo */
-    alt: 'Children at a community meal',
+    alt: 'Woman leading a training session for community women',
   },
 };
 
@@ -259,8 +259,8 @@ export const WHAT_WE_DO = {
     },
   ],
   image: {
-    src: '/assets/WhatWeDo/focus-areas.jpg',
-    alt: 'Children in a community learning setting',
+    src: '/assets/WhatWeDo/community-education.jpeg',
+    alt: 'Women reading educational materials in a community circle',
   },
 };
 
@@ -278,8 +278,8 @@ export const MEASURE_LASTING_CHANGE = {
     'Dozens of communities benefiting from agricultural value-chain support',
   ],
   image: {
-    src: '/assets/MeasureLastingChange/children-bw.jpg',
-    alt: 'Children in a classroom or learning environment',
+    src: '/assets/MeasureLastingChange/women-certificates.jpeg',
+    alt: 'Women proudly holding certificates of participation',
     grayscale: true,
   },
 };
@@ -362,9 +362,9 @@ export const FAQ = {
   ],
   image: {
     /** Replace with your own: add image to public/assets/Faq/ and set src to e.g. '/assets/Faq/faq-supporting.jpg' */
-    src: '/assets/About/children-eating.jpg',
+    src: '/assets/About/workshop-speaker.jpeg',
     /** Describe the photo for accessibility */
-    alt: 'Child in a thoughtful pose, community setting',
+    alt: 'Speaker presenting at a capacity building workshop',
   },
 };
 
@@ -417,8 +417,8 @@ export const CONTRIBUTE_BANNER = {
     href: '/support',
   },
   backgroundImage: {
-    src: '/assets/About/children-eating.jpg',
-    alt: 'Children in a community setting',
+    src: '/assets/About/women-partnership.jpeg',
+    alt: 'Women group photo with RISD and US Embassy partnership banner',
   },
 };
 
@@ -645,6 +645,21 @@ export const DONATE = {
     ],
   },
   contactNote: 'For donation inquiries, please contact us at rescuerisd@gmail.com or call 08027322220.',
+  /** Bank account details for direct transfers – update with real details when available */
+  bankAccounts: [
+    {
+      bankName: 'First Bank of Nigeria',
+      accountName: 'Rescue Initiative for Sustainable Development',
+      accountNumber: '0123456789',
+      currency: 'NGN',
+    },
+    {
+      bankName: 'Zenith Bank',
+      accountName: 'Rescue Initiative for Sustainable Development',
+      accountNumber: '1234567890',
+      currency: 'USD',
+    },
+  ],
 };
 
 /**
