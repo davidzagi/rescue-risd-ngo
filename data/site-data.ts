@@ -71,7 +71,7 @@ export const FOOTER = {
 };
 
 export const HERO = {
-  heading: 'Empowering the Poor and Vulnerable for a Sustainable Future',
+  heading: 'Empowering the Poor and Vulnerable for Sustainable Environment',
   primaryCta: {
     label: 'Partner With Us',
     href: '/partner',
@@ -101,7 +101,7 @@ export const WHO_WE_ARE = {
   sectionLabel: 'WHO WE ARE',
   title: 'Building pathways out of poverty for women, youth, & children',
   description:
-    'Rescue Initiative for Sustainable Development (RISD) is a nonprofit organization dedicated to improving the lives of people most affected by inequality, especially women, youth, and children. Since 2017, we have partnered with communities and global organizations to deliver sustainable, people-centered solutions.',
+    'Rescue Initiative for Sustainable Development (RISD) is a Non-Governmental Organization informed by a strong passion, zeal and commitment to salvage a larger part of the society that are trapped in the web of poverty, disease, hunger, lack or low level of education, poor hygiene and sanitation and misery. Such category of persons who constitute basically women, youth and children are highly vulnerable and voiceless. The aim of the NGO is to create and promote strategic and workable framework that will bring about change, development and progress that will entrench good governance through the life of dignity, respect, social inclusion and enhanced quality of life.',
   cta: {
     label: 'Learn more about RISD',
     href: '/about',
@@ -122,20 +122,21 @@ export const VISION_MISSION_VALUES = {
   vision: {
     title: 'Our Vision',
     description:
-      'A society free from poverty, where everyone has equal opportunity to thrive.',
+      'A Society Free from Poverty with Equal Opportunity',
   },
   mission: {
     title: 'Our Mission',
     description:
-      'To improve the lives of the poor and vulnerable especially women, youth, and children through inclusive, strategic, and gender-responsive approaches that create sustainable environments and livelihoods.',
+      'Improving the lives of the poor and vulnerable particularly women, youth and children through strategic and inclusive gender responsive approach for sustainable development',
   },
   values: {
-    title: 'Our Values',
+    title: 'Thematic Areas',
     /** Each string is one line; use " • " or " & " for inline separators as needed */
     items: [
-      'Accountability • Transparency • Integrity',
-      'Honesty • Gender Inclusion • Resilience',
-      'Collaboration & Teamwork',
+      'Education',
+      'Health',
+      'Environment and Agriculture',
+      'Good Governance'
     ],
   },
 };
@@ -648,15 +649,15 @@ export const DONATE = {
   /** Bank account details for direct transfers – update with real details when available */
   bankAccounts: [
     {
-      bankName: 'First Bank of Nigeria',
+      bankName: 'Access Bank',
       accountName: 'Rescue Initiative for Sustainable Development',
-      accountNumber: '0123456789',
+      accountNumber: '1237460818',
       currency: 'NGN',
     },
     {
-      bankName: 'Zenith Bank',
+      bankName: 'comming ',
       accountName: 'Rescue Initiative for Sustainable Development',
-      accountNumber: '1234567890',
+      accountNumber: '----',
       currency: 'USD',
     },
   ],
