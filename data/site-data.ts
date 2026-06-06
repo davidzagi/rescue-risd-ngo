@@ -154,12 +154,30 @@ export const OUR_TEAM = {
     {
       name: 'Mrs Shedu Gar',
       title: 'Cofounder, CEO',
-      image: { src: '/teams/member1.png', alt: 'mrs shehu gar' },
+      image: { src: '/assets/Team/shedu-gar.jpeg', alt: 'Mrs Shedu Gar' },
       social: {
         facebook: '',
         twitter: 'https://twitter.com',
         linkedin: 'https://linkedin.com',
       },
+    },
+    {
+      name: 'Itanola, Adegboyega Abbas',
+      title: 'Finance Officer',
+      image: {
+        src: '/assets/Team/itanola-adegboyega-abbas.jpeg',
+        alt: 'Itanola, Adegboyega Abbas',
+      },
+      social: { facebook: '', twitter: '', linkedin: '' },
+    },
+    {
+      name: 'Rahila Bala Namadi',
+      title: 'Head of Programmes',
+      image: {
+        src: '/assets/Team/rahila-bala-namadi.jpeg',
+        alt: 'Rahila Bala Namadi',
+      },
+      social: { facebook: '', twitter: '', linkedin: '' },
     },
     {
       name: 'Suleiman',
@@ -167,58 +185,6 @@ export const OUR_TEAM = {
       image: { src: '/teams/member2.png', alt: 'Suleiman' },
       social: {
         facebook: 'https://facebook.com',
-        twitter: '',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Kyla Obrien',
-      title: 'Community Lead',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Kyla Obrien' },
-      social: {
-        facebook: '',
-        twitter: 'https://twitter.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Adrian Dixon',
-      title: 'Operations',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Adrian Dixon' },
-      social: {
-        facebook: 'https://facebook.com',
-        twitter: 'https://twitter.com',
-        linkedin: '',
-      },
-    },
-    {
-      name: 'Freddy Busby',
-      title: 'Partnerships',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Freddy Busby' },
-      social: { facebook: '', twitter: '', linkedin: 'https://linkedin.com' },
-    },
-    {
-      name: 'Dale Banks',
-      title: 'Finance',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Dale Banks' },
-      social: { facebook: 'https://facebook.com', twitter: '', linkedin: '' },
-    },
-    {
-      name: 'Miriam Middleton',
-      title: 'Communications',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Miriam Middleton' },
-      social: {
-        facebook: '',
-        twitter: 'https://twitter.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Ellen Walton',
-      title: 'Advisory',
-      image: { src: '/assets/Team/placeholder.svg', alt: 'Ellen Walton' },
-      social: {
-        facebook: '',
         twitter: '',
         linkedin: 'https://linkedin.com',
       },
@@ -424,7 +390,8 @@ export const CONTRIBUTE_BANNER = {
 };
 
 /**
- * GALLERY – Initiatives and image sets. Images live in public/gallery/{initiativeId}/image{N}.webp
+ * GALLERY – Initiatives and image sets. Images live in public/gallery/{initiativeId}/image{N}.{imageExt}
+ * imageExt defaults to 'webp' if omitted.
  */
 export const GALLERY = {
   title: 'Our Gallery',
@@ -433,6 +400,12 @@ export const GALLERY = {
   initiatives: [
     { id: 'initiative1', label: 'Initiative 1', imageCount: 22 },
     { id: 'initiative2', label: 'Initiative 2', imageCount: 10 },
+    {
+      id: 'aspire-project',
+      label: 'The Aspire Project',
+      imageCount: 13,
+      imageExt: 'jpeg',
+    },
   ],
 };
 

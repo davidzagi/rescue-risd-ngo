@@ -7,11 +7,15 @@ import ImageLightbox from '@/components/gallery/ImageLightbox';
 
 type GalleryImage = { src: string; alt: string };
 
-function buildImages(initiativeId: string, imageCount: number): GalleryImage[] {
+function buildImages(
+  initiativeId: string,
+  imageCount: number,
+  imageExt: string = 'webp'
+): GalleryImage[] {
   return Array.from({ length: imageCount }, (_, i) => {
     const num = i + 1;
     return {
-      src: `/gallery/${initiativeId}/image${num}.webp`,
+      src: `/gallery/${initiativeId}/image${num}.${imageExt}`,
       alt: `${GALLERY.initiatives.find((x) => x.id === initiativeId)?.label ?? initiativeId} — Image ${num}`,
     };
   });
@@ -19,14 +23,19 @@ function buildImages(initiativeId: string, imageCount: number): GalleryImage[] {
 
 export default function GalleryPage() {
   const [activeInitiative, setActiveInitiative] = useState(GALLERY.initiatives[0].id);
-  const [lightboxImage, setLightboxImage] = useState<GalleryImage | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const initiative = useMemo(
     () => GALLERY.initiatives.find((i) => i.id === activeInitiative)!,
     [activeInitiative]
   );
   const images = useMemo(
-    () => buildImages(initiative.id, initiative.imageCount),
+    () =>
+      buildImages(
+        initiative.id,
+        initiative.imageCount,
+        'imageExt' in initiative ? initiative.imageExt : undefined
+      ),
     [initiative]
   );
 
@@ -79,24 +88,24 @@ export default function GalleryPage() {
       </div>
 
       {/* Masonry-style grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div
-          className="columns-2 sm:columns-3 gap-4 space-y-4"
+          className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
           style={{ columnFill: 'balance' }}
         >
           {images.map((img, index) => (
             <button
               key={img.src}
               type="button"
-              onClick={() => setLightboxImage(img)}
-              className="block w-full break-inside-avoid mb-4 rounded-xl overflow-hidden bg-white/50 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#094C3B] focus:ring-offset-2 focus:ring-offset-[#f5f3ef] group"
+              onClick={() => setLightboxIndex(index)}
+              className="block w-full break-inside-avoid mb-6 rounded-xl overflow-hidden bg-white/50 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#094C3B] focus:ring-offset-2 focus:ring-offset-[#f5f3ef] group"
             >
               <div className="relative aspect-4/3 overflow-hidden">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -106,11 +115,12 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {lightboxImage && (
+      {lightboxIndex !== null && (
         <ImageLightbox
-          src={lightboxImage.src}
-          alt={lightboxImage.alt}
-          onClose={() => setLightboxImage(null)}
+          images={images}
+          index={lightboxIndex}
+          onIndexChange={setLightboxIndex}
+          onClose={() => setLightboxIndex(null)}
         />
       )}
     </main>
