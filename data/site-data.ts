@@ -421,11 +421,20 @@ export const GALLERY = {
     {
       id: 'aspire-project',
       label: 'PLAN International — ASPIRE Project',
-      imageCount: 13,
-      imageExt: 'jpeg',
+      imageCount: 7,
       program: 'PLAN International (Global Affairs Canada) ASPIRE Project',
       description: [
         'Focused on improving Sexual and Reproductive Health and Rights (SRHR) for Adolescent Girls and Young Women, and advocating for the domestication of laws against human trafficking in Bauchi State.',
+      ],
+    },
+    {
+      id: 'bread-for-the-world',
+      label: 'Bread for the World',
+      imageCount: 100,
+      program: 'Bread for the World (DEC-SSPF Program)',
+      description: [
+        'Trained 240 beneficiaries in literacy, numeracy, and value-added vocational skills.',
+        'Established Village Savings and Loans Groups (VSLGs) for beneficiaries and improved livelihood outcomes.',
       ],
     },
   ],

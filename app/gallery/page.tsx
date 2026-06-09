@@ -30,12 +30,7 @@ export default function GalleryPage() {
     [activeInitiative]
   );
   const images = useMemo(
-    () =>
-      buildImages(
-        initiative.id,
-        initiative.imageCount,
-        'imageExt' in initiative ? initiative.imageExt : undefined
-      ),
+    () => buildImages(initiative.id, initiative.imageCount),
     [initiative]
   );
 
