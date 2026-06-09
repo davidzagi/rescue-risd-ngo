@@ -87,6 +87,24 @@ export default function GalleryPage() {
         </div>
       </div>
 
+      {/* Initiative description */}
+      {('program' in initiative || 'description' in initiative) && (
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14">
+          {'program' in initiative && initiative.program && (
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#094C3B]">
+              {initiative.program}
+            </h2>
+          )}
+          {'description' in initiative && initiative.description && (
+            <div className="mt-3 space-y-3 text-gray-700 leading-relaxed">
+              {initiative.description.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Masonry-style grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div

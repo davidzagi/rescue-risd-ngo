@@ -398,13 +398,35 @@ export const GALLERY = {
   subtitle:
     'Moments from our initiatives—community, impact, and the people we serve.',
   initiatives: [
-    { id: 'initiative1', label: 'Initiative 1', imageCount: 22 },
-    { id: 'initiative2', label: 'Initiative 2', imageCount: 10 },
+    {
+      id: 'women-for-women-international',
+      label: 'Women for Women International',
+      imageCount: 32,
+      program: 'Stronger Women, Stronger Nations Program',
+      description: [
+        'Implemented for 1,700 beneficiaries in Alkaleri LGA, improving women’s health, wellbeing, income generation, savings culture, decision-making capacity, and community support systems.',
+        'Established 60 VSLA groups with 1700 active women beneficiaries in Gwaram, Alkaleri and Gar community of Alkaleri LGA Bauchi State Nigeria.',
+      ],
+    },
+    {
+      id: 'us-embassy',
+      label: 'U.S. Embassy',
+      imageCount: 7,
+      program: 'Ambassadorial Small-Scale Project Fund',
+      description: [
+        'Implemented an agricultural value-addition project providing energy-saving processing machines such as rice polishers, de-stoners, threshers, and packaging units.',
+        'Beneficiaries include 4 clusters of 25 members (youth, adolescents, and women) engaged in improved agricultural processing and VSLG activities.',
+      ],
+    },
     {
       id: 'aspire-project',
-      label: 'The Aspire Project',
+      label: 'PLAN International — ASPIRE Project',
       imageCount: 13,
       imageExt: 'jpeg',
+      program: 'PLAN International (Global Affairs Canada) ASPIRE Project',
+      description: [
+        'Focused on improving Sexual and Reproductive Health and Rights (SRHR) for Adolescent Girls and Young Women, and advocating for the domestication of laws against human trafficking in Bauchi State.',
+      ],
     },
   ],
 };
