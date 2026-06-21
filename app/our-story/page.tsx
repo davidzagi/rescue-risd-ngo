@@ -6,7 +6,7 @@ import VisionMissionValues from '@/components/sections/VisionMissionValues';
 export const metadata: Metadata = {
   title: 'Our Story | RISD',
   description:
-    'The journey of Rescue Initiative for Sustainable Development\u2014from a shared vision to a movement creating change across 55+ communities.',
+    'The journey of Rescue Initiative for Sustainable Development, from a vision of hope in 2017 to a movement for sustainable development across Bauchi State and beyond.',
 };
 
 export default function OurStoryPage() {

@@ -2,7 +2,13 @@ import type { Metadata } from 'next';
 import WhoWeAre from '@/components/sections/WhoWeAre';
 import VisionMissionValues from '@/components/sections/VisionMissionValues';
 import OurTeam from '@/components/sections/OurTeam';
-import { WHO_WE_ARE, VISION_MISSION_VALUES, OUR_TEAM } from '@/data/site-data';
+import BoardOfTrustees from '@/components/sections/BoardOfTrustees';
+import {
+  WHO_WE_ARE,
+  VISION_MISSION_VALUES,
+  OUR_TEAM,
+  BOARD_OF_TRUSTEES,
+} from '@/data/site-data';
 
 export const metadata: Metadata = {
   title: 'About Us | RISD',
@@ -27,6 +33,7 @@ export default function AboutPage() {
       />
       <VisionMissionValues {...VISION_MISSION_VALUES} />
       <OurTeam {...OUR_TEAM} />
+      <BoardOfTrustees {...BOARD_OF_TRUSTEES} />
     </main>
   );
 }
