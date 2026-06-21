@@ -80,6 +80,24 @@ Add or remove lines in **values.items** as needed. No code changes required.
 
 Add or remove objects in **members** to change the team list. No code changes needed.
 
+## Board of Trustees (About page)
+
+"Our Board of Trustees" section on the About page (anchor `/about#board`). Edit the **BOARD_OF_TRUSTEES** object in `site-data.ts`.
+
+### Section header
+- **sectionLabel** – Small label above the title (e.g. "GOVERNANCE")
+- **title** – e.g. "Our Board of Trustees"
+- **description** – Optional intro paragraph below the title
+
+### Trustees
+- **members** – Array of trustee objects. Each has:
+  - **name** – Full name
+  - **title** – Role (e.g. "Chairman, Board of Trustees")
+  - **image.src** – Path to photo (add images to `public/assets/Trustees/` and set e.g. `'/assets/Trustees/jane-doe.jpg'`). **Leave empty (`''`) to show the trustee's initials** until a photo is available.
+  - **image.alt** – Short description for accessibility
+
+Add or remove objects in **members** to change the board. Three trustees fit the layout best, but it adapts to any number. No code changes needed.
+
 ## What We Do Section
 
 ### Text
@@ -129,3 +147,36 @@ Add or remove objects in the `faqs` array in `site-data.ts`. Order is preserved.
 The organic green shape between the text and image uses `measurelastingchangebg.svg` (fixed design element).
 
 Recommended: Photos showing people/community, around 1200×900px.
+
+## Stories of Change (`/stories`)
+
+Edit the `STORIES` config. Stories are grouped by the **program/partner** that funded them. Each story is a card on `/stories` and has its own page at `/stories/<slug>`.
+
+### Page text
+- **title** / **subtitle** – Hero heading and intro on the `/stories` page.
+
+### Program groups (`programs`)
+Each group has:
+- **id** – Used in the page URL anchor and as a navigation key (lowercase, dashes; must be unique).
+- **partner** – Funder/partner name; shown as the navigation tab and group badge (e.g. "Women for Women International").
+- **program** – The program these stories belong to (e.g. "Stronger Women, Stronger Nations Program").
+- **description** – Short paragraph introducing the group.
+
+### Stories (`stories` inside each program)
+Each story has:
+- **slug** – The URL after `/stories/` (lowercase, dashes; must be unique across all stories). Changing it changes the link.
+- **name** – Beneficiary's name (shown as the card and page title).
+- **location** / **reference** – Community and ID code (e.g. "Gar" / "Gar18"), shown as small print.
+- **theme** – Short headline summarizing the story (e.g. "Finding her voice").
+- **excerpt** – 1–2 sentence summary shown on the card. Keep it under ~200 characters.
+- **quote** – The full story. Separate paragraphs with a blank line (`\n\n`).
+- **image** – `src` is the photo path; **leave `src` empty (`''`) to show a "Photo coming soon" placeholder and the person's initials**.
+
+### Adding a photo to a story
+1. Drop the file in `public/assets/Stories/` (e.g. `public/assets/Stories/sahura-salisu.jpg`).
+2. Set that story's `image.src` to `/assets/Stories/sahura-salisu.jpg` and update `image.alt`.
+Recommended: portrait or landscape photos around 1200×900px.
+
+### Adding a new story or program
+- New story: add an entry to a program's `stories` array with a unique `slug`. The page is generated automatically.
+- New program/partner: add an entry to `programs` with a unique `id` and its own `stories` array. It gets its own navigation tab.

@@ -8,6 +8,7 @@ export const CONFIG = {
   links: [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
+    { label: 'Stories', href: '/stories' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'FAQs', href: '/faqs' },
     { label: 'Contact', href: '/contact' },
@@ -47,6 +48,7 @@ export const FOOTER = {
     [
       { label: 'Our Work', href: '/our-work' },
       { label: 'Our Story', href: '/our-story' },
+      { label: 'Stories of Change', href: '/stories' },
       { label: 'Partner with us', href: '/partner' },
     ],
     [
@@ -162,6 +164,16 @@ export const OUR_TEAM = {
       },
     },
     {
+      name: 'Suleiman',
+      title: 'Program Director',
+      image: { src: '/teams/member2.png', alt: 'Suleiman' },
+      social: {
+        facebook: 'https://facebook.com',
+        twitter: '',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
       name: 'Itanola, Adegboyega Abbas',
       title: 'Finance Officer',
       image: {
@@ -179,14 +191,45 @@ export const OUR_TEAM = {
       },
       social: { facebook: '', twitter: '', linkedin: '' },
     },
+  ],
+};
+
+/**
+ * BOARD OF TRUSTEES – "Our Board of Trustees" section (on the About page).
+ * Each trustee has a name, role, and photo.
+ *
+ * To add a photo: drop a file in public/assets/Trustees/ and set image.src
+ * (e.g. /assets/Trustees/jane-doe.jpg). Leave image.src empty ('') to show
+ * the trustee's initials until a photo is available.
+ */
+export const BOARD_OF_TRUSTEES = {
+  sectionLabel: 'GOVERNANCE',
+  title: 'Our Board of Trustees',
+  description:
+    'Our trustees provide strategic direction, oversight, and accountability, guiding RISD’s mission to empower the poor and vulnerable for a sustainable future.',
+  members: [
     {
-      name: 'Suleiman',
-      title: 'Program Director',
-      image: { src: '/teams/member2.png', alt: 'Suleiman' },
-      social: {
-        facebook: 'https://facebook.com',
-        twitter: '',
-        linkedin: 'https://linkedin.com',
+      name: 'Prof. Haruna Danwanka',
+      title: 'Chairman, Board of Trustees',
+      image: {
+        src: '/assets/Trustees/haruna-danwanka.jpeg',
+        alt: 'Prof. Haruna Danwanka',
+      },
+    },
+    {
+      name: 'Mrs Lydia John Shehu',
+      title: 'Member, Board of Trustees',
+      image: {
+        src: '/assets/Trustees/lydia-john-shehu.jpeg',
+        alt: 'Mrs Lydia John Shehu',
+      },
+    },
+    {
+      name: 'Mr Bitrus David',
+      title: 'Member, Board of Trustees',
+      image: {
+        src: '/assets/Trustees/bitrus-david.jpeg',
+        alt: 'Mr Bitrus David',
       },
     },
   ],
@@ -441,6 +484,171 @@ export const GALLERY = {
 };
 
 /**
+ * STORIES OF CHANGE – Beneficiary stories grouped by program/partner.
+ *
+ * Structure: STORIES.programs[] groups stories by the partner/program that
+ * funded them (e.g. "Women for Women International"). Each story is rendered
+ * as a card on /stories and gets its own page at /stories/<slug>.
+ *
+ * To add a story: append an entry to the relevant program's `stories` array
+ * with a unique `slug`. To add a photo, drop a file in
+ * public/assets/Stories/ and set `image.src` (leave blank to show initials).
+ */
+export const STORIES = {
+  title: 'Stories of Change',
+  subtitle:
+    'Real voices from the women and communities we serve. Each story a testament to resilience, dignity, and lasting change.',
+  programs: [
+    {
+      id: 'women-for-women-international',
+      /** Partner / funder name (used as the navigation group label) */
+      partner: 'Women for Women International',
+      /** Program under which these stories were collected */
+      program: 'Stronger Women, Stronger Nations Program',
+      description:
+        'Through 60 VSLA groups across Gwaram, Alkaleri, and Gar communities of Alkaleri LGA, Bauchi State, 1,700 women gained skills in income generation, savings, health, and decision-making. These are some of their stories.',
+      stories: [
+        {
+          slug: 'sahura-salisu',
+          name: 'Sahura Salisu',
+          location: 'Gar',
+          reference: 'Gar18',
+          theme: 'Growing a trading business',
+          excerpt:
+            'After losing her parents in the crisis, Sahura grew a ₦30,000 rice and maize trade into a thriving business and now rears goats and hens while saving for her family.',
+          quote:
+            "My name is Sahura Salisu, and I was born in Yalwan, Shandam LGA, of Plateau State. I lost my parents during the crisis in our area, which forced us to migrate to Gar, where we stayed with my uncle. After my parents' passing, my mother distributed us among her relatives, as she couldn't care for all of us alone. I got married to Dahiru Usman at 17, and we've been blessed with four children, two boys and two girls, who are all in school.\n\nI started a small business selling rice and maize with an initial capital of ₦30,000. With the training stipend from RISD, I expanded my business to include palm oil, banana, and tiger nut. This expansion increased my profit by ₦15,000, allowing me to grow my capital to ₦60,000.\n\nI've also invested in rearing goats and hens at home. Additionally, I've developed a habit of saving money through my bank account and prioritizing personal and environmental cleanliness.",
+          image: { src: '', alt: 'Sahura Salisu' },
+        },
+        {
+          slug: 'tamida-arziki',
+          name: 'Tamida Arziki',
+          location: 'Gar',
+          reference: 'Gar17',
+          theme: 'From peanuts to land ownership',
+          excerpt:
+            'With her program allowance and a VSLA loan, Tamida expanded from selling peanuts to groundnut oil and vegetables, saved ₦20,000, and bought a plot of land to farm.',
+          quote:
+            'My name is Tamida Moresu, and I was born in Lusa community, Bogoro LGA, Bate. I completed my secondary education before marrying Mr. Yakubu Ahmadi at the age of 22. We have been blessed with five children, all of whom are currently in school.\n\nI engage in farming and sell peanuts, but with the allowance I receive from the program, I have expanded my business to include groundnut oil and vegetables. This expansion has enabled me to save ₦20,000. Using my savings and a loan from the VSLA group, I acquired a plot of land where I planted groundnuts this year. As a result, my family and I have been able to eat well and live in peace.',
+          image: { src: '', alt: 'Tamida Arziki' },
+        },
+        {
+          slug: 'rashida-haruna',
+          name: 'Rashida Haruna',
+          location: 'Gar',
+          reference: 'Gar24',
+          theme: 'Finding her voice',
+          excerpt:
+            'Once unable to speak up even when hurt, Rashida gained the confidence to resolve conflicts peacefully, and grew from running two businesses to four.',
+          quote:
+            'The changes I observed in myself are significant. Before enrolling in the program, I had great difficulty expressing myself. Whenever someone offended me, I didn’t have the confidence to respond or address the issue; I would just remain silent, even when it hurt me deeply. This affected my communication at home, especially with my husband. But through the teachings and support I received from this program, I have gained the confidence and skills to express myself effectively. Now, if someone offends me, I can boldly address the situation and work toward a peaceful resolution.\n\nIn terms of my household responsibilities, I used to neglect my chores. Sometimes I would just lie down and do nothing. But now, knowing that I need to attend class by 9:00 a.m. motivates me to wake up early and complete all my household tasks before leaving the house.\n\nWith regard to my business, I used to run only two, kunu and zobo. Thanks to the knowledge I have gained through the program, I now run four businesses at the same time.',
+          image: { src: '', alt: 'Rashida Haruna' },
+        },
+        {
+          slug: 'zuwaira-amadu',
+          name: 'Zuwaira Amadu',
+          location: 'Gar',
+          reference: 'Gar22',
+          theme: 'Bringing peace to her neighbours',
+          excerpt:
+            'Using the conflict-resolution lessons from her training manual, Zuwaira helped two quarrelling co-wives reconcile, and shared a meal with them in peace.',
+          quote:
+            'One day at home, one of my neighbors came to me. She said she heard that our manual has a lot of pictures and asked me to show her. I brought out the manual and showed her some pictures. She asked me to explain, so I opened the page on conflict resolution and explained what was happening in the picture.\n\nThen she asked if what she and her co-wife had been doing, frequent quarreling, was wrong. I told her yes, it’s wrong to always fight with neighbors or co-wives. She asked how to resolve it, and I told her to go and apologize to her co-wife and ask for forgiveness for any wrong she had done. She did it.\n\nThe next day, they both came to my house, and her co-wife asked who told her to come and apologize, because she knew she couldn’t have done it on her own. She pointed to me. The co-wife was very happy with me and said this training was very good and that she wished she could be enrolled. That evening, I cooked and gave food to both of them, and they ate together.',
+          image: { src: '', alt: 'Zuwaira Amadu' },
+        },
+        {
+          slug: 'shafaatu-danjuma',
+          name: 'Shafaatu Danjuma',
+          location: 'Gar',
+          reference: 'Gar14',
+          theme: 'Building a herd of goats',
+          excerpt:
+            'With the goat she received and one she bought, Shafaatu is steadily building her livestock and plans to buy more after harvest.',
+          quote:
+            'I have bought one goat, and added to the one given to me. I hope to buy more when I sell my farm produce after harvest.',
+          image: { src: '', alt: 'Shafaatu Danjuma' },
+        },
+        {
+          slug: 'hansatu-iliyasu',
+          name: 'Hansatu Iliyasu',
+          location: 'Gar',
+          reference: 'Gar20',
+          theme: 'Reviving her poultry farm',
+          excerpt:
+            'Once losing birds to disease, Hansatu learned proper poultry care from her vocational trainer, and now her compound is full of healthy, reproducing chickens.',
+          quote:
+            'I was into poultry farming, but my birds were dying one by one from fluids and other diseases. As a result of this program, I was able to learn more about poultry with the help of my vocational trainer. The chickens have reproduced and my compound is full of them. I intend to sell some of them during the festive period to buy a goat and add to the one given to me.',
+          image: { src: '', alt: 'Hansatu Iliyasu' },
+        },
+        {
+          slug: 'bridget-danladi',
+          name: 'Bridget Danladi',
+          location: 'Gar',
+          reference: 'Gar19',
+          theme: 'Earning through cosmetology',
+          excerpt:
+            'Trained in cosmetology, Bridget now produces and sells pomade and liquid soap, saving every bit of profit to expand into new products.',
+          quote:
+            'From my training in cosmetology, I produce pomade and sell it at the market on market days. I also sell liquid soap to bike riders in my community to wash their bikes, and I’ve been making a profit of ₦150 to ₦200 on each product. I’ve been saving all my interest to expand my business into other products.',
+          image: { src: '', alt: 'Bridget Danladi' },
+        },
+        {
+          slug: 'jummai-musa',
+          name: 'Jummai Musa',
+          location: 'Gar',
+          reference: 'Gar22',
+          theme: 'Toward a provision store',
+          excerpt:
+            'A carton of detergent from RISD became the seed of a growing shop, as Jummai reinvested her profits into soap, salt, and seasoning.',
+          quote:
+            'I used to give my children detergent to sell for me, but after RISD gave me cartons of detergent, I sold it and used the profit to add soap, salt, and Maggi to my business. I now sell them in front of our compound, which I hope to turn into a big provision store someday.',
+          image: { src: '', alt: 'Jummai Musa' },
+        },
+        {
+          slug: 'victoria-wani',
+          name: 'Victoria Wani',
+          location: 'Gar',
+          reference: 'Gar17',
+          theme: 'Peace, health, and savings',
+          excerpt:
+            'Victoria now lives in harmony with her co-wife, manages her earnings in three parts, saves with the VSLA, and chooses hospitals over self-medication.',
+          quote:
+            'I now live in peace with my co-wife, and I respect my husband the way I should. I take a bath regularly, cook food early, and help my husband with some of the household financial responsibilities when he lacks money. I can now resolve conflict between us in the family.\n\nI now calculate my expenses and income from my capital, and share my earnings into three parts: I save one part in the VSLA, use one part for my financial needs, and use one part to expand my business. I now go to the hospital when I am sick instead of self-medicating, and I advise my neighbors to stop using herbs to treat themselves and their children. One of them is now happy and goes to the hospital when she or her family members are sick.',
+          image: { src: '', alt: 'Victoria Wani' },
+        },
+        {
+          slug: 'rabiatu-abubakar',
+          name: 'Rabiatu Abubakar',
+          location: 'Gar',
+          reference: 'Gar22',
+          theme: 'Mastering business records',
+          excerpt:
+            'Rabiatu learned to separate profit from capital and keep records, skills that help her grow her trade and a profitable firewood resale business.',
+          quote:
+            'I didn’t know how to separate my profit from my capital. But now, I’ve learned how to do that properly, and also how to keep business records to know whether I’m making a profit or not. If I notice I’m not gaining, I now understand how to add more money to the business to make it grow and become more profitable. These skills have helped me better manage and improve my business.\n\nI also sell firewood that I buy from people who bring it from the bush. I resell it for ₦3,000, making a profit of ₦1,000 on each bunch.',
+          image: { src: '', alt: 'Rabiatu Abubakar' },
+        },
+      ],
+    },
+  ],
+};
+
+/**
+ * Helper: flat list of every story with its parent program attached.
+ * Used by /stories/[slug] to look up a single story.
+ */
+export function getAllStories() {
+  return STORIES.programs.flatMap((program) =>
+    program.stories.map((story) => ({ ...story, program }))
+  );
+}
+
+/** Helper: find one story (with its program) by slug, or undefined. */
+export function getStoryBySlug(slug: string) {
+  return getAllStories().find((story) => story.slug === slug);
+}
+
+/**
  * PARTNER PAGE – Partnership information and how to collaborate with RISD.
  */
 export const PARTNER = {
@@ -589,30 +797,49 @@ export const OUR_WORK = {
 export const OUR_STORY = {
   title: 'Our Story',
   subtitle:
-    'From a shared vision to a movement for change—the journey of Rescue Initiative for Sustainable Development.',
+    'From a vision of hope to a movement for sustainable development.',
   story: [
     {
-      heading: 'How It Started',
-      text: 'Rescue Initiative for Sustainable Development (RISD) was founded in 2017 by a group of passionate individuals who saw the urgent need to address poverty, inequality, and exclusion in Nigerian communities. What began as a small grassroots effort has grown into a recognized nonprofit organization making real impact.',
+      heading: 'A Vision Born from Concern',
+      text: 'The story of Rescue Initiative for Sustainable Development (RISD) is rooted in a deep concern for the growing challenges faced by poor and vulnerable communities, particularly women, youth, and children who continue to struggle with poverty, poor health, limited access to education, and social exclusion. In the years leading up to 2017, a group of passionate development practitioners and community advocates working in Bauchi State, Nigeria, led by Lydia John Shehu, witnessed firsthand the realities of vulnerable populations: young girls forced out of school, women denied economic opportunities, communities lacking access to basic health information, and young people trapped in cycles of poverty.',
     },
     {
-      heading: 'Our Growth',
-      text: 'Over the years, RISD has expanded its reach from a few local communities to over 55 communities across Nigeria. We have partnered with global organizations, government agencies, and local leaders to deliver sustainable programs in education, health, environment, and governance.',
+      heading: 'The Birth of RISD',
+      text: 'Rather than accepting these challenges as inevitable, they envisioned a society where every individual, regardless of gender, social status, or economic background, could access opportunities to thrive. They believed that sustainable development could only be achieved when communities themselves were empowered to become agents of change. This vision led to the establishment of Rescue Initiative for Sustainable Development (RISD) on 14th March 2017.',
+    },
+    {
+      heading: 'The Early Days',
+      text: 'In its early days, RISD operated with limited resources but abundant commitment. Its activities were driven by volunteers, community mobilizers, and dedicated professionals who invested their time, knowledge, and personal resources to support vulnerable populations. Working directly within communities, RISD focused on listening to local voices, understanding grassroots challenges, and identifying practical solutions. Like many emerging civil society organizations, it faced obstacles of funding, institutional growth, and operational capacity. Yet, guided by accountability, transparency, honesty, integrity, hard work, resilience, gender inclusion, and teamwork, it steadily gained the trust of communities, government institutions, and development partners.',
+    },
+    {
+      heading: 'A New Chapter: Formal Registration',
+      text: 'Recognizing the need for a stronger institutional framework to expand its impact, RISD formally registered with the Corporate Affairs Commission (CAC) on 17th September 2019. This milestone marked the beginning of a new chapter in the organization’s growth and positioned it to engage more effectively with national and international development partners.',
+    },
+    {
+      heading: 'Growing Impact',
+      text: 'Since its formal registration, RISD has evolved into a respected community-based organization implementing evidence-driven and gender-responsive interventions across four strategic thematic areas: Education, Health, Environment, and Good Governance. Through collaborations with Women for Women International, PLAN International, MEDA, the Development Exchange Centre (DEC), the U.S. Embassy, and other development actors, RISD has empowered women economically, improved access to health information, strengthened youth leadership, promoted gender equality, expanded educational opportunities, and supported sustainable livelihoods. Whether helping women establish savings groups, mentoring adolescent girls and young women, advocating for the protection of vulnerable populations, or promoting agricultural value addition and entrepreneurship, RISD remains committed to development that is inclusive, sustainable, and community-driven.',
     },
     {
       heading: 'Where We Are Today',
-      text: 'Today, RISD is a trusted partner in community development, with a proven track record of delivering measurable results. We have supported over 2,730 people, mentored 1,500+ youth, and empowered 1,700+ women with income, health, and leadership skills. Our work continues to grow as we expand into new communities and deepen our impact.',
+      text: 'Today, RISD stands as a trusted development partner working alongside government ministries, community-based organizations, traditional institutions, donor agencies, and grassroots networks to address some of society’s most pressing challenges. What began as a small initiative driven by a shared passion for social justice has grown into an organization recognized for its commitment to sustainable development and community empowerment. Guided by its motto, “Empowering the Poor and Vulnerable for Sustainable Environment,” RISD continues to envision a society free from poverty with equal opportunity. Its story is still being written, one community, one family, and one transformed life at a time.',
     },
   ],
   milestones: [
-    { year: '2017', event: 'RISD founded with a mission to fight poverty and inequality' },
-    { year: '2018', event: 'First community programs launched in Bauchi State' },
-    { year: '2019', event: 'Expanded to 20+ communities with education and health programs' },
-    { year: '2020', event: 'COVID-19 response: emergency relief for vulnerable communities' },
-    { year: '2021', event: 'Reached 40+ communities, 1,000+ youth mentored' },
-    { year: '2022', event: 'Launched agricultural value-chain and women empowerment programs' },
-    { year: '2023', event: 'Expanded to 55+ communities, 2,730+ people supported' },
-    { year: '2024', event: 'Strengthened partnerships with international organizations' },
+    {
+      year: '14 Mar 2017',
+      event:
+        'RISD founded in Bauchi State, Nigeria, by a team of development practitioners and community advocates led by Lydia John Shehu.',
+    },
+    {
+      year: '17 Sep 2019',
+      event:
+        'RISD formally registered with the Corporate Affairs Commission (CAC), expanding its reach and institutional capacity.',
+    },
+    {
+      year: 'Today',
+      event:
+        'Implementing evidence-based, gender-responsive programs across Education, Health, Environment, and Good Governance through partnerships with Women for Women International, PLAN International, MEDA, DEC, the U.S. Embassy, and others.',
+    },
   ],
 };
 
