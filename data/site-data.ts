@@ -518,7 +518,7 @@ export const STORIES = {
             'After losing her parents in the crisis, Sahura grew a ₦30,000 rice and maize trade into a thriving business and now rears goats and hens while saving for her family.',
           quote:
             "My name is Sahura Salisu, and I was born in Yalwan, Shandam LGA, of Plateau State. I lost my parents during the crisis in our area, which forced us to migrate to Gar, where we stayed with my uncle. After my parents' passing, my mother distributed us among her relatives, as she couldn't care for all of us alone. I got married to Dahiru Usman at 17, and we've been blessed with four children, two boys and two girls, who are all in school.\n\nI started a small business selling rice and maize with an initial capital of ₦30,000. With the training stipend from RISD, I expanded my business to include palm oil, banana, and tiger nut. This expansion increased my profit by ₦15,000, allowing me to grow my capital to ₦60,000.\n\nI've also invested in rearing goats and hens at home. Additionally, I've developed a habit of saving money through my bank account and prioritizing personal and environmental cleanliness.",
-          image: { src: '', alt: 'Sahura Salisu' },
+          image: { src: '/assets/Stories/sahura-salisu.png', alt: 'Sahura Salisu' },
         },
         {
           slug: 'tamida-arziki',
@@ -530,7 +530,7 @@ export const STORIES = {
             'With her program allowance and a VSLA loan, Tamida expanded from selling peanuts to groundnut oil and vegetables, saved ₦20,000, and bought a plot of land to farm.',
           quote:
             'My name is Tamida Moresu, and I was born in Lusa community, Bogoro LGA, Bate. I completed my secondary education before marrying Mr. Yakubu Ahmadi at the age of 22. We have been blessed with five children, all of whom are currently in school.\n\nI engage in farming and sell peanuts, but with the allowance I receive from the program, I have expanded my business to include groundnut oil and vegetables. This expansion has enabled me to save ₦20,000. Using my savings and a loan from the VSLA group, I acquired a plot of land where I planted groundnuts this year. As a result, my family and I have been able to eat well and live in peace.',
-          image: { src: '', alt: 'Tamida Arziki' },
+          image: { src: '/assets/Stories/tamida-arziki.png', alt: 'Tamida Arziki' },
         },
         {
           slug: 'rashida-haruna',
@@ -542,7 +542,7 @@ export const STORIES = {
             'Once unable to speak up even when hurt, Rashida gained the confidence to resolve conflicts peacefully, and grew from running two businesses to four.',
           quote:
             'The changes I observed in myself are significant. Before enrolling in the program, I had great difficulty expressing myself. Whenever someone offended me, I didn’t have the confidence to respond or address the issue; I would just remain silent, even when it hurt me deeply. This affected my communication at home, especially with my husband. But through the teachings and support I received from this program, I have gained the confidence and skills to express myself effectively. Now, if someone offends me, I can boldly address the situation and work toward a peaceful resolution.\n\nIn terms of my household responsibilities, I used to neglect my chores. Sometimes I would just lie down and do nothing. But now, knowing that I need to attend class by 9:00 a.m. motivates me to wake up early and complete all my household tasks before leaving the house.\n\nWith regard to my business, I used to run only two, kunu and zobo. Thanks to the knowledge I have gained through the program, I now run four businesses at the same time.',
-          image: { src: '', alt: 'Rashida Haruna' },
+          image: { src: '/assets/Stories/rashida-haruna.png', alt: 'Rashida Haruna' },
         },
         {
           slug: 'zuwaira-amadu',
@@ -554,7 +554,7 @@ export const STORIES = {
             'Using the conflict-resolution lessons from her training manual, Zuwaira helped two quarrelling co-wives reconcile, and shared a meal with them in peace.',
           quote:
             'One day at home, one of my neighbors came to me. She said she heard that our manual has a lot of pictures and asked me to show her. I brought out the manual and showed her some pictures. She asked me to explain, so I opened the page on conflict resolution and explained what was happening in the picture.\n\nThen she asked if what she and her co-wife had been doing, frequent quarreling, was wrong. I told her yes, it’s wrong to always fight with neighbors or co-wives. She asked how to resolve it, and I told her to go and apologize to her co-wife and ask for forgiveness for any wrong she had done. She did it.\n\nThe next day, they both came to my house, and her co-wife asked who told her to come and apologize, because she knew she couldn’t have done it on her own. She pointed to me. The co-wife was very happy with me and said this training was very good and that she wished she could be enrolled. That evening, I cooked and gave food to both of them, and they ate together.',
-          image: { src: '', alt: 'Zuwaira Amadu' },
+          image: { src: '/assets/Stories/zuwaira-amadu.png', alt: 'Zuwaira Amadu' },
         },
         {
           slug: 'shafaatu-danjuma',
@@ -566,7 +566,7 @@ export const STORIES = {
             'With the goat she received and one she bought, Shafaatu is steadily building her livestock and plans to buy more after harvest.',
           quote:
             'I have bought one goat, and added to the one given to me. I hope to buy more when I sell my farm produce after harvest.',
-          image: { src: '', alt: 'Shafaatu Danjuma' },
+          image: { src: '/assets/Stories/shafaatu-danjuma.png', alt: 'Shafaatu Danjuma' },
         },
         {
           slug: 'hansatu-iliyasu',
@@ -578,7 +578,7 @@ export const STORIES = {
             'Once losing birds to disease, Hansatu learned proper poultry care from her vocational trainer, and now her compound is full of healthy, reproducing chickens.',
           quote:
             'I was into poultry farming, but my birds were dying one by one from fluids and other diseases. As a result of this program, I was able to learn more about poultry with the help of my vocational trainer. The chickens have reproduced and my compound is full of them. I intend to sell some of them during the festive period to buy a goat and add to the one given to me.',
-          image: { src: '', alt: 'Hansatu Iliyasu' },
+          image: { src: '/assets/Stories/hansatu-iliyasu.png', alt: 'Hansatu Iliyasu' },
         },
         {
           slug: 'bridget-danladi',
@@ -590,7 +590,7 @@ export const STORIES = {
             'Trained in cosmetology, Bridget now produces and sells pomade and liquid soap, saving every bit of profit to expand into new products.',
           quote:
             'From my training in cosmetology, I produce pomade and sell it at the market on market days. I also sell liquid soap to bike riders in my community to wash their bikes, and I’ve been making a profit of ₦150 to ₦200 on each product. I’ve been saving all my interest to expand my business into other products.',
-          image: { src: '', alt: 'Bridget Danladi' },
+          image: { src: '/assets/Stories/bridget-danladi.png', alt: 'Bridget Danladi' },
         },
         {
           slug: 'jummai-musa',
@@ -602,7 +602,7 @@ export const STORIES = {
             'A carton of detergent from RISD became the seed of a growing shop, as Jummai reinvested her profits into soap, salt, and seasoning.',
           quote:
             'I used to give my children detergent to sell for me, but after RISD gave me cartons of detergent, I sold it and used the profit to add soap, salt, and Maggi to my business. I now sell them in front of our compound, which I hope to turn into a big provision store someday.',
-          image: { src: '', alt: 'Jummai Musa' },
+          image: { src: '/assets/Stories/jummai-musa.png', alt: 'Jummai Musa' },
         },
         {
           slug: 'victoria-wani',
@@ -614,7 +614,7 @@ export const STORIES = {
             'Victoria now lives in harmony with her co-wife, manages her earnings in three parts, saves with the VSLA, and chooses hospitals over self-medication.',
           quote:
             'I now live in peace with my co-wife, and I respect my husband the way I should. I take a bath regularly, cook food early, and help my husband with some of the household financial responsibilities when he lacks money. I can now resolve conflict between us in the family.\n\nI now calculate my expenses and income from my capital, and share my earnings into three parts: I save one part in the VSLA, use one part for my financial needs, and use one part to expand my business. I now go to the hospital when I am sick instead of self-medicating, and I advise my neighbors to stop using herbs to treat themselves and their children. One of them is now happy and goes to the hospital when she or her family members are sick.',
-          image: { src: '', alt: 'Victoria Wani' },
+          image: { src: '/assets/Stories/victoria-wani.png', alt: 'Victoria Wani' },
         },
         {
           slug: 'rabiatu-abubakar',
@@ -626,7 +626,7 @@ export const STORIES = {
             'Rabiatu learned to separate profit from capital and keep records, skills that help her grow her trade and a profitable firewood resale business.',
           quote:
             'I didn’t know how to separate my profit from my capital. But now, I’ve learned how to do that properly, and also how to keep business records to know whether I’m making a profit or not. If I notice I’m not gaining, I now understand how to add more money to the business to make it grow and become more profitable. These skills have helped me better manage and improve my business.\n\nI also sell firewood that I buy from people who bring it from the bush. I resell it for ₦3,000, making a profit of ₦1,000 on each bunch.',
-          image: { src: '', alt: 'Rabiatu Abubakar' },
+          image: { src: '/assets/Stories/rabiatu-abubakar.png', alt: 'Rabiatu Abubakar' },
         },
       ],
     },
