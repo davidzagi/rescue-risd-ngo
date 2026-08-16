@@ -452,6 +452,18 @@ export const GALLERY = {
       ],
     },
     {
+      id: 'wfwi-25th-anniversary',
+      label: 'WfWI 25th Anniversary',
+      imageCount: 44,
+      program: 'Women for Women International — 25th Anniversary Celebration',
+      description: [
+        'Memorable moments from the 25th Anniversary celebration of Women for Women International (WfWI) in Nigeria, held in Lagos, marking 25 years of transforming lives through women’s empowerment, resilience, and hope.',
+        'RISD shared remarks on its fruitful partnership with WfWI and the impact of their collaboration in empowering women to overcome poverty, gender-based violence, harmful gender norms, and other socio-cultural barriers.',
+        'Through this partnership, RISD trained 1,500 women in 3 cohorts of 300 each across communities of Alkaleri LGA, Bauchi State — Alkaleri (300), Gwaram (600), and Gar (600).',
+        'A reminder that investing in women is an investment in stronger families, stronger communities, and a stronger nation.',
+      ],
+    },
+    {
       id: 'us-embassy',
       label: 'U.S. Embassy',
       imageCount: 7,
